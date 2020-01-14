@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import AppBar from 'material-ui/AppBar'
-import { RadioGroup } from '@material-ui/core'
-import RaisedButton from 'material-ui/RaisedButton'
-// import FormLabel from '@material-ui/core/FormLabel';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Radio from '@material-ui/core/Radio';
-import FormControl from '@material-ui/core/FormControl';
+import {    MuiThemeProvider,
+            RadioGroup, 
+            CardContent, 
+            AppBar, 
+            Button, 
+            Radio, 
+            FormControlLabel, 
+            FormControl, 
+            Typography, 
+            Card 
+        } from '@material-ui/core'
+
 
 
 export class StoreType extends Component {
@@ -17,12 +21,19 @@ export class StoreType extends Component {
     render() {
         const { values, handleChange } = this.props 
         return (
+            <div style={{backgroundColor: "#2c2f3c", height: '100vh'}}>
             <MuiThemeProvider>
                 <React.Fragment>
-                    <AppBar title='What type of retail store do you have?' style={{backgroundColor: `${styles.nav.color}`}}/>
+                    <AppBar position='static' style={{backgroundColor: '#151856' }}>
+                        <Typography variant="h4" style={{paddingTop: '2%', paddingBottom: '2%', padding: "2%"}}>
+                            What type of retail store do you have?
+                        </Typography>
+                    </AppBar>
                     
                     <br></br>
                     <br></br>
+                <Card style={{minWidth: '45%', display: 'inline-block'}}>
+                    <CardContent>
                     <FormControl component="fieldset" >
                     <RadioGroup onChange={handleChange('storeType')} defaultValue={values.storeType}>
                         <FormControlLabel value="Ski Shop" control={<Radio color="primary"/>} label="Ski Shop" />
@@ -32,26 +43,31 @@ export class StoreType extends Component {
                     </RadioGroup>
                     </FormControl>
                     <br/>
-                    <RaisedButton 
-                    label='continue'
-                    primary="true"
-                    style={styles.button}
-                    onClick={this.continue}
-                    />
+                    <br/>
+                    <Button 
+                        label='continue'
+                        // primary="true"
+                        style={styles.button}
+                        onClick={this.continue}
+                        >continue</Button>
+                    </CardContent>
+                </Card>
+                
                 </React.Fragment>
             </MuiThemeProvider>
+            </div>
         )
     }
 }
 
 const styles = {
     button: {
-        margin: 15,
-        color: 'blue'
+        color: 'white',
+        minWidth: '30%',
+        margin: 25,
+        backgroundColor: '#151856'
     },
-    nav: {
-        color: '#0346ce'
-    }
+    
 }
 
 export default StoreType

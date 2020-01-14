@@ -1,13 +1,7 @@
 import React, { Component } from 'react'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import AppBar from 'material-ui/AppBar'
-import { RadioGroup } from '@material-ui/core'
-import RaisedButton from 'material-ui/RaisedButton'
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Radio from '@material-ui/core/Radio';
-import FormControl from '@material-ui/core/FormControl';
+import { MuiThemeProvider, RadioGroup, AppBar, Button, 
+        FormControlLabel, Radio, FormControl, TextField, Typography, Card, CardContent } from '@material-ui/core'
 import NumberFormat from 'react-number-format'
-import TextField from '@material-ui/core/TextField'
 
 export class LastYear extends Component {
     continue = e => {
@@ -43,9 +37,18 @@ export class LastYear extends Component {
     render() {
         const { values, handleChange } = this.props 
         return (
+            <div style={{backgroundColor: "#2c2f3c", height: '100vh'}}>
             <MuiThemeProvider>
                 <React.Fragment>
-                    <AppBar title= "What percent of your sales was last year's product?" style={{backgroundColor: `${styles.nav.color}`}}/>
+                <AppBar position='static' style={{backgroundColor: '#151856' }}>
+                        <Typography variant="h4" style={{paddingTop: '2%', paddingBottom: '2%', padding: "2%"}}>
+                            What was your net profit (%) from previous year
+                        </Typography>
+                    </AppBar>   
+                    <br></br>
+                    <br></br>
+                    <Card style={{minWidth: '45%', display: 'inline-block'}}>
+                    <CardContent>
                     
                     <FormControl component="fieldset" >
                     <RadioGroup onChange={handleChange('lastYear')} defaultValue={values.lastYear}>
@@ -64,32 +67,42 @@ export class LastYear extends Component {
                     </RadioGroup>
                     </FormControl>
                     <br/>
-                    <RaisedButton 
-                    label='previous'
-                    // primary='true'
-                    style={styles.button}
-                    onClick={this.back}
-                    />
-                    <RaisedButton 
-                    label='continue'
-                    primary='true'
-                    style={styles.button}
-                    onClick={this.continue}
-                    />
-                
+                    <Button 
+                        style={styles.button2}
+                        onClick={this.back}
+                    >
+                        previous
+                    </Button>
+
+                    <Button 
+                        style={styles.button}
+                        onClick={this.continue}
+                    >
+                        continue
+                    </Button>
+                    </CardContent>
+                    </Card>
                 </React.Fragment>
             </MuiThemeProvider>
+            </div>
         )
     }
 }
 
 const styles = {
     button: {
-        margin: 15,
+        color: 'white',
+        minWidth: '30%',
+        margin: 25,
+        backgroundColor: '#151856'
     },
-    nav: {
-        color: '#0346ce'
+    button2: {
+        color: 'white',
+        minWidth: '30%',
+        margin: 25,
+        backgroundColor: '#6f1502'
     }
+    
 }
 
 export default LastYear
