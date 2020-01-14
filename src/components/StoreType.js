@@ -12,7 +12,6 @@ import {    MuiThemeProvider,
         } from '@material-ui/core'
 
 
-
 export class StoreType extends Component {
     continue = e => {
         e.preventDefault()

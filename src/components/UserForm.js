@@ -4,6 +4,8 @@ import AnnualSales from './AnnualSales'
 import NetProfit from './NetProfit'
 import LastYear from './LastYear'
 import LoseInternet from './LoseInternet'
+import LandingPage from './LandingPage'
+import Calculation from './Calculation'
 
 export class UserForm extends Component {
     state = {
@@ -33,6 +35,19 @@ export class UserForm extends Component {
         })
     }
 
+    restart = () => {
+        this.setState({
+            step: 1,
+            storeType: '',
+            annualSales: '',
+            netProfit: '',
+            lastYear: '',
+            loseInternet: '',
+            result: '',
+            result2: ''
+        })
+    }
+
     //Handle field change
 
     handleChange = input => e => {
@@ -55,27 +70,32 @@ export class UserForm extends Component {
         })
     }
 
-    withCommas = (x) => {
-        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-    }
+    
 
 
     render() {
         const { step } = this.state
         const { storeType, annualSales, netProfit, lastYear, loseInternet, result, result2 } = this.state
-        const values = {storeType, annualSales, netProfit, lastYear, loseInternet}
+        const values = {storeType, annualSales, netProfit, lastYear, loseInternet, result, result2}
         // const result = parseInt(lastYear) + parseInt(netProfit)
         
         switch (step) {
             default:
-            case 1: 
+                case 1: 
+                return(
+                    <LandingPage
+                    nextStep={this.nextStep}
+                    handleChange={this.handleChange}
+                    values={values}/>
+                )
+            case 2: 
                 return(
                     <StoreType
                     nextStep={this.nextStep}
                     handleChange={this.handleChange}
                     values={values}/>
                 )
-            case 2:
+            case 3:
                 return(
                     <AnnualSales 
                     nextStep={this.nextStep}
@@ -83,7 +103,7 @@ export class UserForm extends Component {
                     handleChange={this.handleChange}
                     values={values}/>
                 )
-            case 3:
+            case 4:
                 return (
                     <NetProfit 
                     nextStep={this.nextStep}
@@ -91,7 +111,7 @@ export class UserForm extends Component {
                     handleChange={this.handleChange}
                     values={values}/>
                 )
-            case 4:
+            case 5:
                 return (
                     <LastYear 
                     nextStep={this.nextStep}
@@ -99,7 +119,7 @@ export class UserForm extends Component {
                     handleChange={this.handleChange}
                     values={values}/>
                 )
-            case 5:
+            case 6:
                 return (
                     <LoseInternet 
                     nextStep={this.nextStep}
@@ -109,16 +129,11 @@ export class UserForm extends Component {
                     setResult={this.setResult}
                     />
                 )
-            case 6:
+            case 7:
                 return (
-                <>
-                    <h1>Annual Sales:</h1>
-                    <h2 style={{color: 'green'}}>${this.withCommas(annualSales)}</h2>
-                    <h1>Amount lost to internet: </h1>
-                    <h2 style={{color: 'red'}}>${this.withCommas(result)}</h2>
-                    <h1>Total amount using Best Deal Retailer: </h1>
-                    <h1 style={{color: 'blue'}}>${this.withCommas(result2)}</h1>
-                </>
+                    <Calculation
+                    restart={this.restart}
+                    values={values}/>
                 )
             }
     }
