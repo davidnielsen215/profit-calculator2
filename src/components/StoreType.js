@@ -10,6 +10,8 @@ import {    MuiThemeProvider,
             Typography, 
             Card 
         } from '@material-ui/core'
+import EntireLogo from '../images/EntireLogo.png'
+import '../LandingPage.css'
 
 
 export class StoreType extends Component {
@@ -44,8 +46,6 @@ export class StoreType extends Component {
                     <br/>
                     <br/>
                     <Button 
-                        label='continue'
-                        // primary="true"
                         style={styles.button}
                         onClick={this.continue}
                         >continue</Button>
@@ -54,6 +54,8 @@ export class StoreType extends Component {
                 
                 </React.Fragment>
             </MuiThemeProvider>
+            <br/>
+            <img className='entirelogo' src={EntireLogo} alt=""/>
             </div>
         )
     }

@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { MuiThemeProvider, RadioGroup, CardContent, Card, AppBar, Button, 
         FormControlLabel, FormControl, Radio, TextField, Typography } from '@material-ui/core'
 import NumberFormat from 'react-number-format'
+import EntireLogo from '../images/EntireLogo.png'
+import '../LandingPage.css'
 
 
 export class AnnualSales extends Component {
@@ -103,6 +105,9 @@ export class AnnualSales extends Component {
                     </Card>
                 </React.Fragment>
             </MuiThemeProvider>
+            <br/>
+            <img className='entirelogo' src={EntireLogo} alt=""/>
+
             </div>
         )
     }
