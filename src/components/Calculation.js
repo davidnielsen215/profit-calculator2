@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { MuiThemeProvider, AppBar, Button, 
         TextField, Typography, Card, CardContent, Paper } from '@material-ui/core'
+import EntireLogo from '../images/EntireLogo.png'
 
 
 class Calculation extends Component {
@@ -28,9 +29,20 @@ class Calculation extends Component {
                 <br></br>
                 <Card style={{minWidth: '45%', display: 'inline-block'}}>
                     <CardContent>
+                    
+                    <img className='entirelogo' src={EntireLogo} alt=""/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
                     <Paper elevation={3}>
                         <h1>Annual Sales:</h1>
                         <h2 style={{color: 'green'}}>${this.withCommas(values.annualSales)}</h2>
+                    </Paper>
+                    <br></br>
+                    <Paper elevation={3}>
+                        <h1>Additional Profit:</h1>
+                        <h2 style={{color: 'green'}}>${this.withCommas(values.result3)}</h2>
                     </Paper>
                     <br></br>
                     <Paper elevation={3}>

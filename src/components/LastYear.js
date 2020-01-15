@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { MuiThemeProvider, RadioGroup, AppBar, Button, 
         FormControlLabel, Radio, FormControl, TextField, Typography, Card, CardContent } from '@material-ui/core'
 import NumberFormat from 'react-number-format'
+import EntireLogo from '../images/EntireLogo.png'
+
 
 export class LastYear extends Component {
     continue = e => {
@@ -84,6 +86,8 @@ export class LastYear extends Component {
                     </Card>
                 </React.Fragment>
             </MuiThemeProvider>
+            <br/>
+            <img className='entirelogo' src={EntireLogo} alt=""/>
             </div>
         )
     }

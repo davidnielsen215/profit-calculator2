@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Button } from '@material-ui/core'
 import '../LandingPage.css'
 import Logo from '../images/Logo.png' 
-// import EntireLogo from '../images/EntireLogo.png'
+import EntireLogo from '../images/EntireLogo.png'
 
 export class LandingPage extends Component {
     continue = e => {
@@ -15,6 +15,7 @@ export class LandingPage extends Component {
             <div className='maincont'>
                 <div className='container1'>
                     <img className='logo' src={Logo} alt=""/>
+                    <img className='entirelogo' src={EntireLogo} alt=""/>
                 </div>
 
                 <div className="container">

@@ -49,8 +49,12 @@
 }
 
 .entirelogo{
+    display: none;
+}
+
+.entirelogo{
     width: 40%;
-    background-color: rgb(218, 218, 218);
+    background-color: white;
     border-radius: 10px;
     padding: 4px;
     margin-top: 2%;
@@ -76,12 +80,23 @@
         margin: none;
     }
 
+    .logo{
+        display: none;
+    }
+
     .container1{
         margin-top: 0px; 
         color: white;
         /* background: radial-gradient(circle, rgba(31,192,255,1) 0%, rgba(0,80,255,1) 100%); */
-        height: 0vh;
-        width: 0vw;
+        height: 10vh;
+        width: 100vw;
+    }
+
+    .entirelogo{
+        display: inline-block;
+        width: 45%;
+        background-color: none;
+        /* height: 15%; */
     }
 }
 
@@ -97,9 +112,14 @@
     }
 
     .logo{
-        padding-top: none;
-        width: 55%;
-        margin: none
+        display: none;
+    }
+
+    .entirelogo{
+        display: inline-block;
+        width: 75%;
+        background-color: none;
+        /* height: 15%; */
     }
 
     .container{

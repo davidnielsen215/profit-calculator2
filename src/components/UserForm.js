@@ -46,6 +46,7 @@ export class UserForm extends Component {
             loseInternet: '',
             result: '',
             result2: '',
+            result3: '',
             email: ''
         })
     }
@@ -65,10 +66,12 @@ export class UserForm extends Component {
 
         const equate = annualSales * var3
         const equate2 = annualSales * var4
+        const equate3 = annualSales * (.05)
 
         this.setState({
             result: result + (equate).toFixed(2) ,
-            result2: result2 + (equate2).toFixed(2)
+            result2: result2 + (equate2).toFixed(2),
+            result3: result + (equate3).toFixed(2)
         })
     }
 
@@ -77,8 +80,8 @@ export class UserForm extends Component {
 
     render() {
         const { step } = this.state
-        const { storeType, annualSales, netProfit, lastYear, loseInternet, result, result2, email } = this.state
-        const values = {storeType, annualSales, netProfit, lastYear, loseInternet, result, result2, email}
+        const { storeType, annualSales, netProfit, lastYear, loseInternet, result, result2,result3, email } = this.state
+        const values = {storeType, annualSales, netProfit, lastYear, loseInternet, result, result2, result3, email}
         // const result = parseInt(lastYear) + parseInt(netProfit)
         
         switch (step) {
