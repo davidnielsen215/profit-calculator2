@@ -16,7 +16,8 @@ export class UserForm extends Component {
         lastYear: '',
         loseInternet: '',
         result: '',
-        result2: ''
+        result2: '',
+        email: ''
     }
 
     // Proceed to next step
@@ -44,7 +45,8 @@ export class UserForm extends Component {
             lastYear: '',
             loseInternet: '',
             result: '',
-            result2: ''
+            result2: '',
+            email: ''
         })
     }
 
@@ -75,8 +77,8 @@ export class UserForm extends Component {
 
     render() {
         const { step } = this.state
-        const { storeType, annualSales, netProfit, lastYear, loseInternet, result, result2 } = this.state
-        const values = {storeType, annualSales, netProfit, lastYear, loseInternet, result, result2}
+        const { storeType, annualSales, netProfit, lastYear, loseInternet, result, result2, email } = this.state
+        const values = {storeType, annualSales, netProfit, lastYear, loseInternet, result, result2, email}
         // const result = parseInt(lastYear) + parseInt(netProfit)
         
         switch (step) {
@@ -133,7 +135,9 @@ export class UserForm extends Component {
                 return (
                     <Calculation
                     restart={this.restart}
-                    values={values}/>
+                    values={values}
+                    handleChange={this.handleChange}
+                    />
                 )
             }
     }
