@@ -69,9 +69,9 @@ export class UserForm extends Component {
         const equate3 = annualSales * (.05)
 
         this.setState({
-            result: result + (equate).toFixed(2) ,
-            result2: result2 + (equate2).toFixed(2),
-            result3: result + (equate3).toFixed(2)
+            result: result + (equate).toFixed() ,
+            result2: result2 + (equate2).toFixed(),
+            result3: result + (equate3).toFixed()
         })
     }
 

@@ -17,7 +17,7 @@ class Calculation extends Component {
     render() {
         const { values, handleChange } = this.props
         return (
-            <div style={{backgroundColor: "#2c2f3c", height: '100vh'}}>
+            <div className="lastbackground">
                 <MuiThemeProvider>
                 <React.Fragment>
                 <AppBar position='static' style={{backgroundColor: '#151856' }}>
@@ -27,10 +27,10 @@ class Calculation extends Component {
                 </AppBar>   
                 <br></br>
                 <br></br>
-                <Card style={{minWidth: '45%', display: 'inline-block'}}>
+                <Card style={{maxWidth: '75%', display: 'inline-block'}}>
                     <CardContent>
                     
-                    <img className='entirelogo' src={EntireLogo} alt=""/>
+                    <img className='lastlogo' src={EntireLogo} alt=""/>
                     <br/>
                     <br/>
                     <br/>

@@ -46,7 +46,7 @@ export class LoseInternet extends Component {
     render() {
         const { values, handleChange } = this.props 
         return (
-            <div style={{backgroundColor: "#2c2f3c", height: '100vh'}}>
+            <div className="background">
 
             <MuiThemeProvider>
                 <React.Fragment>
@@ -57,7 +57,7 @@ export class LoseInternet extends Component {
                     </AppBar>     
                     <br></br>
                     <br></br>
-                    <Card style={{minWidth: '45%', display: 'inline-block'}}>
+                    <Card style={styles.card}>
                     <CardContent>                  
                     <FormControl component="fieldset" >
                     <RadioGroup onChange={handleChange('loseInternet')} defaultValue={values.loseInternet}>
@@ -113,6 +113,11 @@ const styles = {
         minWidth: '30%',
         margin: 25,
         backgroundColor: '#6f1502'
+    },
+    card: {
+        minWidth: '45%', 
+        display: 'inline-block', 
+        boxShadow: '6px 6px'
     }
     
 }

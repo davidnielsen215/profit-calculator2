@@ -22,7 +22,7 @@ export class StoreType extends Component {
     render() {
         const { values, handleChange } = this.props 
         return (
-            <div style={{backgroundColor: "#2c2f3c", height: '100vh'}}>
+            <div className="background">
             <MuiThemeProvider>
                 <React.Fragment>
                     <AppBar position='static' style={{backgroundColor: '#151856' }}>
@@ -33,7 +33,7 @@ export class StoreType extends Component {
                     
                     <br></br>
                     <br></br>
-                <Card style={{minWidth: '45%', display: 'inline-block'}}>
+                <Card style={styles.card}>
                     <CardContent>
                     <FormControl component="fieldset" >
                     <RadioGroup onChange={handleChange('storeType')} defaultValue={values.storeType}>
@@ -68,7 +68,11 @@ const styles = {
         margin: 25,
         backgroundColor: '#151856'
     },
-    
+    card: {
+        minWidth: '45%', 
+        display: 'inline-block', 
+        boxShadow: '6px 6px'
+    }
 }
 
 export default StoreType

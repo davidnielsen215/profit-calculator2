@@ -7,6 +7,14 @@
     display: flex;
     
 }
+.background{
+    height: 100vh;
+    background: radial-gradient(circle, rgba(64,69,84,1) 0%, rgba(31,33,40,1) 100%);
+}
+.lastbackground{
+    height: 116vh;
+    background: radial-gradient(circle, rgba(64,69,84,1) 0%, rgba(31,33,40,1) 100%);
+}
 .container{
     margin-top: 0px; 
     color: white;
@@ -18,7 +26,6 @@
 .container1{
     margin-top: 0px; 
     color: white;
-    /* background: radial-gradient(circle, rgba(31,192,255,1) 0%, rgba(0,80,255,1) 100%); */
     height: 100vh;
     width: 40vw;
 }
@@ -59,6 +66,11 @@
     border-radius: 5px;
     padding: 4px;
     margin-top: 2%;
+    box-shadow: 6px 6px
+}
+
+.lastlogo{
+    width: 50%
 }
 
 

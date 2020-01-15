@@ -55,7 +55,7 @@ export class AnnualSales extends Component {
         const {isDisabled} = this.state
         
         return (
-            <div style={{backgroundColor: "#2c2f3c", height: '100vh'}}>
+            <div className="background">
             <MuiThemeProvider>
                 <React.Fragment>
                 <AppBar position='static' style={{backgroundColor: '#151856' }}>
@@ -65,7 +65,7 @@ export class AnnualSales extends Component {
                     </AppBar>                    
                     <br></br>
                     <br></br>
-                    <Card style={{minWidth: '45%', display: 'inline-block'}}>
+                    <Card style={styles.card}>
                     <CardContent>
                     <FormControl >
                     <RadioGroup onChange={handleChange('annualSales')} defaultValue={values.annualSales}>
@@ -125,6 +125,11 @@ const styles = {
         minWidth: '30%',
         margin: 25,
         backgroundColor: '#6f1502'
+    },
+    card: {
+        minWidth: '45%', 
+        display: 'inline-block', 
+        boxShadow: '6px 6px'
     }
     
 }

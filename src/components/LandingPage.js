@@ -21,8 +21,8 @@ export class LandingPage extends Component {
                 <div className="container">
 
                     <h1 className='title'>BEST DEAL RETAILER PROFIT CALCULATOR</h1>
-                    <h2 className='question'>What's your number?</h2>
-                    <h3 className='statement'>Find out how much extra profit you'll make with us</h3>
+                    <h1 className='question'><b>What's your number?</b></h1>
+                    <h3 className='statement'><i>Find out how much extra profit you'll make with us</i></h3>
                     <h1 className='statement2'>Double your Profit!</h1>
                     <Button onClick={this.continue}
                     style={styles.button}>Begin</Button>
