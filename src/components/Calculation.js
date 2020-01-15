@@ -51,7 +51,7 @@ class Calculation extends Component {
                     onChange={handleChange('Email')}
                     // id="outlined-basic"
                     variant="outlined"
-                    style={{width: '40%'}}
+                    style={styles.input}
                     />
                     <br></br>
                     <Button style={styles.button}>Send</Button>
@@ -76,6 +76,9 @@ const styles = {
         minWidth: '30%',
         margin: 25,
         backgroundColor: '#6f1502'
+    },
+    input: {
+        width: '55%'
     }
     
 }

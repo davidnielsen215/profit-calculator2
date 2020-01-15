@@ -50,7 +50,7 @@ export class LoseInternet extends Component {
                 <React.Fragment>
                 <AppBar position='static' style={{backgroundColor: '#151856' }}>
                         <Typography variant="h4" style={{paddingTop: '2%', paddingBottom: '2%', padding: "2%"}}>
-                            What was your net profit (%) from previous year
+                        What percent of your sales are you losing to the internet? (Estimate)
                         </Typography>
                     </AppBar>     
                     <br></br>
@@ -61,7 +61,7 @@ export class LoseInternet extends Component {
                     <RadioGroup onChange={handleChange('loseInternet')} defaultValue={values.loseInternet}>
                         <FormControlLabel value="5%" control={<Radio color="primary"/>} label="0% - 10%" />
                         <FormControlLabel value="15.5%" control={<Radio color="primary"/>} label="11% - 20%%" />
-                        <FormControlLabel value="25.5%" control={<Radio color="primary"/>} label="21% - 30%" />
+                        <FormControlLabel value="25.5%" control={<Radio color="primary"/>} label="21% - 30% (Industry Average)" />
                         <FormControlLabel value="35.5%" control={<Radio color="primary"/>} label="31% - 40%" />
                         <FormControlLabel value="45.5%" control={<Radio color="primary"/>} label="41% - 50%" />
                         <TextField

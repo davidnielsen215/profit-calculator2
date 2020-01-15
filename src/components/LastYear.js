@@ -42,7 +42,7 @@ export class LastYear extends Component {
                 <React.Fragment>
                 <AppBar position='static' style={{backgroundColor: '#151856' }}>
                         <Typography variant="h4" style={{paddingTop: '2%', paddingBottom: '2%', padding: "2%"}}>
-                            What was your net profit (%) from previous year
+                        What percent of your sales is last year’s product?
                         </Typography>
                     </AppBar>   
                     <br></br>
