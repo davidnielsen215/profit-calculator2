@@ -36,23 +36,27 @@ class Calculation extends Component {
                     <br/>
                     <br/>
                     <Paper elevation={3}>
-                        <h1>Annual Sales:</h1>
+                        <h3>Annual Sales:</h3>
                         <h2 style={{color: 'green'}}>${this.withCommas(values.annualSales)}</h2>
+                        <br/>
                     </Paper>
                     <br></br>
                     <Paper elevation={3}>
-                        <h1>Additional Profit:</h1>
+                        <h3>Additional Profit:</h3>
                         <h2 style={{color: 'green'}}>${this.withCommas(values.result3)}</h2>
+                        <br/>
                     </Paper>
                     <br></br>
                     <Paper elevation={3}>
-                        <h1>Amount lost to internet: </h1>
+                        <h3>Amount lost to internet: </h3>
                         <h2 style={{color: 'red'}}>${this.withCommas(values.result)}</h2>
+                        <br/>
                     </Paper>
                     <br></br>
                     <Paper elevation={3}>
-                        <h1>Amount using Best Deal Retailer: </h1>
-                        <h1 style={{color: 'blue'}}>${this.withCommas(values.result2)}</h1>
+                        <h3>Amount using Best Deal Retailer: </h3>
+                        <h2 style={{color: 'blue'}}>${this.withCommas(values.result2)}</h2>
+                        <br/>
                     </Paper>
                     <Button onClick={this.restart} style={styles.button2}>Restart</Button>
                     <br></br>

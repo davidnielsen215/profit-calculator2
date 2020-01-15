@@ -8,7 +8,7 @@ import {    MuiThemeProvider,
             FormControlLabel, 
             FormControl, 
             Typography, 
-            Card 
+            Card ,
         } from '@material-ui/core'
 import EntireLogo from '../images/EntireLogo.png'
 import '../LandingPage.css'
@@ -64,7 +64,7 @@ export class StoreType extends Component {
 const styles = {
     button: {
         color: 'white',
-        minWidth: '30%',
+        minWidth: '60%',
         margin: 25,
         backgroundColor: '#151856'
     },
