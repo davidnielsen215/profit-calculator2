@@ -19,6 +19,12 @@ export class StoreType extends Component {
         e.preventDefault()
         this.props.nextStep()
     }
+
+    getStep = (x) => {
+        let returnedStep = x - 1
+        return returnedStep
+    }
+
     render() {
         const { values, handleChange } = this.props 
         return (
@@ -35,6 +41,8 @@ export class StoreType extends Component {
                     <br></br>
                 <Card style={styles.card}>
                     <CardContent>
+                    <h4>Step {this.getStep(values.step)} of 5</h4>
+                    <br/>
                     <FormControl component="fieldset" >
                     <RadioGroup onChange={handleChange('storeType')} defaultValue={values.storeType}>
                         <FormControlLabel value="Ski Shop" control={<Radio color="primary"/>} label="Ski Shop" />
@@ -43,7 +51,7 @@ export class StoreType extends Component {
                         <FormControlLabel value="Outdoor Gear + Wear" control={<Radio color="primary"/>} label="Outdoor Gear + Wear" />
                     </RadioGroup>
                     </FormControl>
-                    <br/>
+                    {/* <br/> */}
                     <br/>
                     <Button 
                         style={styles.button}

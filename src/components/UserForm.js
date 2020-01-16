@@ -81,7 +81,7 @@ export class UserForm extends Component {
     render() {
         const { step } = this.state
         const { storeType, annualSales, netProfit, lastYear, loseInternet, result, result2,result3, email } = this.state
-        const values = {storeType, annualSales, netProfit, lastYear, loseInternet, result, result2, result3, email}
+        const values = {step, storeType, annualSales, netProfit, lastYear, loseInternet, result, result2, result3, email}
         // const result = parseInt(lastYear) + parseInt(netProfit)
         
         switch (step) {

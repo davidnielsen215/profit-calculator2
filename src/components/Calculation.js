@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { MuiThemeProvider, AppBar, Button, 
-        TextField, Typography, Card, CardContent, Paper } from '@material-ui/core'
+import { MuiThemeProvider, Button, 
+        TextField, Card, CardContent, Paper } from '@material-ui/core'
 import EntireLogo from '../images/EntireLogo.png'
 
 
@@ -20,21 +20,21 @@ class Calculation extends Component {
             <div className="lastbackground">
                 <MuiThemeProvider>
                 <React.Fragment>
-                <AppBar position='static' style={{backgroundColor: '#151856' }}>
+                {/* <AppBar position='static' style={{backgroundColor: '#151856' }}>
                         <Typography variant="h4" style={{paddingTop: '2%', paddingBottom: '2%', padding: "2%"}}>
                             Results
                         </Typography>
-                </AppBar>   
+                </AppBar>    */}
                 <br></br>
                 <br></br>
-                <Card style={{maxWidth: '75%', display: 'inline-block'}}>
+                <Card style={{maxWidth: '75%', display: 'inline-block', marginTop: '1%'}}>
                     <CardContent>
-                    
+            
                     <img className='lastlogo' src={EntireLogo} alt=""/>
                     <br/>
                     <br/>
                     <br/>
-                    <br/>
+                    {/* <br/> */}
                     <Paper elevation={3}>
                         <h3>Annual Sales</h3>
                         <h2 style={{color: 'green'}}>${this.withCommas(values.annualSales)}</h2>
@@ -60,7 +60,7 @@ class Calculation extends Component {
                     </Paper>
                     <Button onClick={this.restart} style={styles.button2}>Restart</Button>
                     <br></br>
-                    <h4>Enter Email to be sent results</h4>
+                    <h4>Email Results</h4>
                     <br></br>
                     <TextField
                     label="Email"

@@ -20,6 +20,11 @@ export class AnnualSales extends Component {
         this.props.prevStep()
     }
 
+    getStep = (x) => {
+        let returnedStep = x - 1
+        return returnedStep
+    }
+
      NumberFormatCustom1(props) {
         const { inputRef, onChange, ...other } = props;
         // const {isDiabled} = this.state
@@ -67,6 +72,8 @@ export class AnnualSales extends Component {
                     <br></br>
                     <Card style={styles.card}>
                     <CardContent>
+                    <h4>Step {this.getStep(values.step)} of 5</h4>
+                    <br/>
                     <FormControl >
                     <RadioGroup onChange={handleChange('annualSales')} defaultValue={values.annualSales}>
                         <FormControlLabel value="625000" disabled={isDisabled} control={<Radio color="primary"/>} label="$500K - $750K" />

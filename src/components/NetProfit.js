@@ -17,6 +17,11 @@ export class NetProfit extends Component {
         this.props.prevStep()
     }
 
+    getStep = (x) => {
+        const returnedStep = x -1
+        return returnedStep
+    }
+
     NumberFormatCustom1(props) {
         const { inputRef, onChange, ...other } = props;
       
@@ -54,6 +59,8 @@ export class NetProfit extends Component {
                     <br></br>
                     <Card style={styles.card}>
                     <CardContent>
+                    <h4>Step {this.getStep(values.step)} of 5</h4>
+                    <br/>
                     <FormControl component="fieldset" >
                     <RadioGroup onChange={handleChange('netProfit')} defaultValue={values.netProfit}>
                         <FormControlLabel value="1.95%" control={<Radio color="primary"/>} label="0.0% - 3.9%" />

@@ -16,6 +16,11 @@ export class LastYear extends Component {
         this.props.prevStep()
     }
 
+    getStep = (x) => {
+        const returnedStep = x -1
+        return returnedStep
+    }
+
     NumberFormatCustom1(props) {
         const { inputRef, onChange, ...other } = props;
       
@@ -51,7 +56,8 @@ export class LastYear extends Component {
                     <br></br>
                     <Card style={styles.card}>
                     <CardContent>
-                    
+                    <h4>Step {this.getStep(values.step)} of 5</h4>
+                    <br/>
                     <FormControl component="fieldset" >
                     <RadioGroup onChange={handleChange('lastYear')} defaultValue={values.lastYear}>
                         <FormControlLabel value="15%" control={<Radio color="primary"/>} label="10% - 20%" />

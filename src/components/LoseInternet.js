@@ -18,6 +18,11 @@ export class LoseInternet extends Component {
         this.props.prevStep()
     }
 
+    getStep = (x) => {
+        const returnedStep = x -1
+        return returnedStep
+    }
+
     setResult = e => {
         e.preventDefault()
         this.props.setResult()
@@ -52,13 +57,15 @@ export class LoseInternet extends Component {
                 <React.Fragment>
                 <AppBar position='static' style={{backgroundColor: '#151856' }}>
                         <Typography variant="h4" style={{paddingTop: '2%', paddingBottom: '2%', padding: "2%"}}>
-                        What percent of your sales are you losing to the internet? (Estimate)
+                        What percent of your sales are lost to the internet? (Estimate)
                         </Typography>
                     </AppBar>     
                     <br></br>
                     <br></br>
                     <Card style={styles.card}>
-                    <CardContent>                  
+                    <CardContent>       
+                    <h4>Step {this.getStep(values.step)} of 5</h4>     
+                    <br/>      
                     <FormControl component="fieldset" >
                     <RadioGroup onChange={handleChange('loseInternet')} defaultValue={values.loseInternet}>
                         <FormControlLabel value="5%" control={<Radio color="primary"/>} label="0% - 10%" />
